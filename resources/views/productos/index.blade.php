@@ -122,7 +122,7 @@
                                      data-tipo="{{ $producto->tipo }}">
                                     <div class="relative">
                                         @if($producto->foto)
-                                            <img src="{{ Storage::url($producto->foto) }}" 
+                                            <img src="/storage/app/public/{{ $producto->foto }}" 
                                                  alt="{{ $producto->nombre }}" 
                                                  class="w-full h-40 sm:h-48 object-cover">
                                         @else
@@ -528,7 +528,7 @@
             const keepCurrentImageText = document.getElementById('keepCurrentImageText');
             
             if (productPhoto) {
-                currentImage.src = `/storage/${productPhoto}`;
+                currentImage.src = `/storage/app/public/${productPhoto}`;
                 currentImage.alt = productName;
                 currentImageContainer.classList.remove('hidden');
                 keepCurrentImageText.classList.remove('hidden');
